@@ -326,6 +326,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-image: var(--imagen-piso);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
   
 }
 
@@ -349,22 +350,70 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 14px 0 75px 0;
     font-size: 30px;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
+/* implementacion carrosel skills*/
+.slider {
   position: relative;
+  margin-top: 100px;
+  width: 80%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 470px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
-.background-image-left {
-  top: 28%;
+
+
+
+.item {
+  color: #000;
   position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+  width: 80%; /* Usamos un ancho flexible */
+  max-width: 200px;
+  height: 80%; /* Usamos una altura flexible */
+  max-height: 100%;
+  text-align: justify;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.5s;
+  left: calc(50% - 50px);
+  top: 0;
 }
+
+#next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prev, #next {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  font-family: monospace;
+  font-weight: bold;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#prev:hover, #next:hover {
+  opacity: 1;
+}
+
+
+/*fin de carrosel*/
+
 
 /************ Projects Css ************/
 .project {
