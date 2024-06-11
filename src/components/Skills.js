@@ -98,7 +98,7 @@ export const Skills = () => {
     setActive((prevActive) => (prevActive - 1 + items.length) % items.length);
   };
   
-
+  
  
 
   return (
